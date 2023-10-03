@@ -1,0 +1,1 @@
+//condições com switch... case   direto no HTML 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero pares</title>
+</head>
+<body>
+    <!--Estrutura de repetição  (break e continue) break sai do laço de repetição e o continue retorna ao inicio do laço-->
+
+    <script>
+        alert("Digite 0 para sair!")
+        do{
+            const num = Number(prompt("Numero:"))
+            if(num == 0 || isNaN(num)){
+                const sair = confirm("Confrimar saida?")
+                if(sair){
+                    break  //sair da repetição
+                }else{
+                    continue
+                }
+            }
+                if(num % 2 == 0){  //se o restante da divisão for zero puxa esse if
+                    alert(`O dobro do ${num} é: ${num * 2}`)
+                }else{ //se o resto da divisão for diferente de 0 então..
+                    alert(`O triblo de ${num} é: ${num * 3 }`)
+                }
+        }while(true)  //enquanto verdade só sai do laço com o breck
+        alert("Bye, bye...")
+    </script>
+</body>

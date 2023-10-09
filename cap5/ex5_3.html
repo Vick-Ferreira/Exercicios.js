@@ -3,33 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabuada</title>
+    <title>Numero pares</title>
 </head>
 <body>
-    <h1> Numero Decrescente</h1>
-    <form>
-        <p>Numero:
-            <input type="number"  id="inNumero" required>
-        </p>
-           <input type="submit" value="Mostrar Tabuada">
-    </form>
 
-    <h3></h3> 
-    <script >
-        
+<script >
+//usando While E do...while, quando não saubermos previamente quantas vezes a repetição vai ocorrer.
     let num 
-do{
+    do{
     num = Number(prompt("Número"))
-    alert("Digite um número válido")
+    if(num == 0  ||  isNaN(num)){
+        alert("Digite um número válido")
+    }
 }while (num ==0 || isNaN(num))
 let pares = `Pares entre 1 e ${num}:`
 
-for(let i =2; i <= num; i = i + 2){
-
+for(let i = 2; i <= num; i = i + 2){
+    pares = pares + i + ","
 }
-alert(pares)
+alert(pares)  //exibindo lista de numeros pares
 
-    </script>
-    
+</script>
 </body>
 </html>
